@@ -75,13 +75,13 @@ public class Dipendente {
         System.out.println(toString());
     }
 
-    public double calcolaPaga() {
-        return this.stipendio;
+    public static double calcolaPaga(Dipendente dip) {
+        return dip.stipendio;
     }
 
-    public double calcolaPaga(int ore) {
-       double pagaStraord = ore * this.importoOrarioStraordinario;
-        return this.stipendio + pagaStraord;
+    public static double calcolaPaga(Dipendente dip, int ore) {
+       double pagaStraord = ore * dip.importoOrarioStraordinario;
+        return dip.stipendio + pagaStraord;
     }
 
 }

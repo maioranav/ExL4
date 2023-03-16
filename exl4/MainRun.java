@@ -30,7 +30,7 @@ public class MainRun {
 	public static void stampaPaghe() {
 		double totaleStipendi = 0;
 		for (int i = 0; i < dipendenti.size(); i++) {
-			totaleStipendi +=dipendenti.get(i).calcolaPaga();
+			totaleStipendi +=Dipendente.calcolaPaga(dipendenti.get(i));
 		}
 		System.out.println("\n L'azienda deve pagare " + totaleStipendi + "€ di stipendi ai dipendenti.");
 	}
@@ -39,7 +39,7 @@ public class MainRun {
 		//aggiungo le ore di straordinario
 		double totaleStipendi = 0;
 		for (int i = 0; i < dipendenti.size(); i++) {
-			totaleStipendi +=dipendenti.get(i).calcolaPaga(ore);
+			totaleStipendi += Dipendente.calcolaPaga(dipendenti.get(i), ore);
 		}
 		System.out.println("\n *** RILEVAZIONE STIPENDI ***");
 		System.out.println("\n L'azienda deve pagare " + totaleStipendi + "€ di stipendi ai dipendenti\n conteggiando " + ore + " ore di straordinario");
