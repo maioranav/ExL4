@@ -48,16 +48,21 @@ public class Dipendente {
             case OPERAIO -> {
                 this.livello = Livello.IMPIEGATO;
                 this.stipendio = genStipendio(Livello.IMPIEGATO);
+                System.out.println("Il dipendente " + this.matricola + " è diventanto " + this.livello);
             }
             case IMPIEGATO -> {
                 this.livello = Livello.QUADRO;
                 this.stipendio = genStipendio(Livello.QUADRO);
+                System.out.println("Il dipendente " + this.matricola + " è diventanto " + this.livello);
+
             }
             case QUADRO -> {
                 this.livello = Livello.DIRIGENTE;
                 this.stipendio = genStipendio(Livello.DIRIGENTE);
+                System.out.println("Il dipendente " + this.matricola + " è diventanto " + this.livello);
+
             }
-            default -> System.out.println("Il dipendente non è promuovibile. Stato attuale: " + this.livello);
+            default -> System.out.println("Il dipendente " + this.matricola + " non è promuovibile. Stato attuale: " + this.livello);
         }
     }
 
