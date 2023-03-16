@@ -7,7 +7,7 @@ public class MainRun {
 	static ArrayList<Dipendente> dipendenti = new ArrayList<>();
 
 	public static void main(String[] args) {
-		System.out.println("*** STATO INIZIALE DIPENDENTI *** \n");
+		System.out.println("\n\n*** STATO INIZIALE DIPENDENTI *** \n");
 		dipendenti.add(new Dipendente(13533, "Produzione", Livello.OPERAIO));
 		dipendenti.add(new Dipendente(12547, "Produzione", Livello.OPERAIO));
 		dipendenti.add(new Dipendente(16161, "Amministrazione", Livello.IMPIEGATO));
@@ -41,6 +41,7 @@ public class MainRun {
 		for (int i = 0; i < dipendenti.size(); i++) {
 			totaleStipendi +=dipendenti.get(i).calcolaPaga(ore);
 		}
+		System.out.println("\n *** RILEVAZIONE STIPENDI ***");
 		System.out.println("\n L'azienda deve pagare " + totaleStipendi + "€ di stipendi ai dipendenti\n conteggiando " + ore + " ore di straordinario");
 	}
 
