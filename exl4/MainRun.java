@@ -7,11 +7,11 @@ public class MainRun {
 	static ArrayList<Dipendente> dipendenti = new ArrayList<>();
 
 	public static void main(String[] args) {
-		System.out.println("\n\n*** STATO INIZIALE DIPENDENTI *** \n");
-		dipendenti.add(new Dipendente(13533, "Produzione", Livello.OPERAIO));
-		dipendenti.add(new Dipendente(12547, "Produzione", Livello.OPERAIO));
-		dipendenti.add(new Dipendente(16161, "Amministrazione", Livello.IMPIEGATO));
-		dipendenti.add(new Dipendente(11125, "Vendite", Livello.DIRIGENTE));
+		System.out.println("\n\n *** STATO INIZIALE DIPENDENTI *** \n");
+		dipendenti.add(new Dipendente(13533, Dipartimento.PRODUZIONE, Livello.OPERAIO));
+		dipendenti.add(new Dipendente(12547, Dipartimento.PRODUZIONE, Livello.OPERAIO));
+		dipendenti.add(new Dipendente(16161, Dipartimento.AMMINISTRAZIONE, Livello.IMPIEGATO));
+		dipendenti.add(new Dipendente(11125, Dipartimento.VENDITE, Livello.DIRIGENTE));
 		stampaDipendenti();
 		System.out.println("\n *** PROMUOVO DUE DIPENDENTI *** \n");
 		dipendenti.get(1).promuovi();

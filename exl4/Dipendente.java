@@ -6,9 +6,9 @@ public class Dipendente {
     private double stipendio;
     private double importoOrarioStraordinario;
     private Livello livello;
-    private String dipartimento;
+    private Dipartimento dipartimento;
 
-    public Dipendente(int matr, String dip){
+    public Dipendente(int matr, Dipartimento dip){
         this.matricola = matr;
         this.dipartimento = dip;
         this.importoOrarioStraordinario = 30;
@@ -16,13 +16,13 @@ public class Dipendente {
         this.stipendio = stipendioBase;
     }
 
-    public Dipendente(int matr, String dip, Livello liv){
+    public Dipendente(int matr, Dipartimento dip, Livello liv){
         this(matr, dip);
         this.livello = liv;
         this.stipendio = Dipendente.genStipendio(liv);
     }
 
-    public Dipendente(int matr, String dip, Livello liv, double pagaora) {
+    public Dipendente(int matr, Dipartimento dip, Livello liv, double pagaora) {
         this(matr, dip, liv);
         this.importoOrarioStraordinario = pagaora;
     }
@@ -39,7 +39,7 @@ public class Dipendente {
         this.importoOrarioStraordinario = pagaora;
     }
 
-    public void setDipartimento(String dip) {
+    public void setDipartimento(Dipartimento dip) {
         this.dipartimento = dip;
     }
 
