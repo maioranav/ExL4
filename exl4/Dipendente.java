@@ -43,7 +43,7 @@ public class Dipendente {
         this.dipartimento = dip;
     }
 
-    public void promuovi() {
+    public Livello promuovi() {
         switch (this.livello) {
             case OPERAIO -> {
                 this.livello = Livello.IMPIEGATO;
@@ -64,6 +64,7 @@ public class Dipendente {
             }
             default -> System.out.println("Il dipendente " + this.matricola + " non è promuovibile. Stato attuale: " + this.livello);
         }
+        return this.livello;
     }
 
     @Override
